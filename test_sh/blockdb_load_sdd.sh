@@ -3,12 +3,12 @@
 # 获取脚本的绝对路径
 script_path=$(readlink -f "$0")
 script_dir_path=$(dirname "$script_path")
-workloads="/home/db/YCSB-YXLFE-CPP/workloads/blockdb_workload"
-blockdb_properties="/home/db/YCSB-YXLFE-CPP/blockdb/blockdb.properties"
+workloads="/home/zc/code/YCSB-YXLFE-CPP/workloads/blockdb_workload"
+blockdb_properties="/home/zc/code/YCSB-YXLFE-CPP/blockdb/blockdb.properties"
 
-exec="/home/db/YCSB-YXLFE-CPP/build/ycsb" 
-log="ycsb-log.txt"
-dbpath="/home/db/blockdb_ycsb_test/$(date +%Y%m%d)"  # 指定日期格式为 YYYYMMDD
+exec="/home/zc/code/YCSB-YXLFE-CPP/build/ycsb" 
+log="ycsb-blockdb-sdd-log.txt"
+dbpath="/database_sdd/blockdb_ycsb_test/$(date +%Y%m%d)"  # 指定日期格式为 YYYYMMDD
 
 if [ -d "$dbpath" ]; then  
     rm -rf $dbpath/*  
